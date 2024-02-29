@@ -71,3 +71,45 @@ expresión de $\gamma\left( s \right)$ tenemos que:
 s \right)} \mathbf{n}_{\alpha}\left( s \right)
 \]
 Es decir, la curva formada por los centros de curvatura de $\alpha$.
+
+Veamos ahora la implicación inversa. Por tanto, supongamos que $\beta\left( t
+\right)$, como curva formada por los centros de curvatura de $\alpha$, es
+evoluta de $\alpha$. Al ser evoluta se da\footnote{Proposición
+7.2\cite{sanjurjo}} la siguiente relación:
+\[
+\alpha\left( s \right) = \beta\left( s \right) + \left( \lambda - s \right)
+\beta'\left( s \right),\ \lambda \in \mathbb{R}
+\]
+Si sustituimos el valor de $\alpha\left( s \right)$ dado por esta fórmula en la
+igualdad de la curva de centros tenemos lo siguiente:
+\begin{align*}
+    \beta\left( s \right) &= \alpha\left( s \right) + \frac{1}{\kappa\left( s
+    \right)} \mathbf{n}_{\alpha}\left( s \right)\\
+    &= \beta\left( s \right) + \left( \lambda - s \right) \beta'\left( s
+    \right) + \frac{1}{\kappa\left( s \right)} \mathbf{n}_{\alpha}\left( s \right)
+\end{align*}
+Es decir, $0 = \left( \lambda - s \right)\beta'\left( s \right) +
+\frac{1}{\kappa\left( s \right)} \mathbf{n}_{\alpha}\left( s \right)$. En
+definitiva, $\beta'\left( s \right) = \frac{1}{\kappa\left( s \right) \cdot
+\left( \lambda - s \right)} \mathbf{n}_{\alpha}\left( s \right)$. Como es para
+un punto fijo, la anterior igualdad nos indica que $\beta'$ y
+$\mathbf{n}_{\alpha}\left( s \right)$ son proporcionales. %TODO: Seguro?
+Si calculamos ahora $\beta'$ en base a la fórmula de los centros de curvatura
+tenemos que:
+\[
+\beta'\left( s \right) = \alpha'\left( s \right) + \frac{1}{\kappa\left( s
+\right)} \mathbf{n}'_{\alpha}\left( s \right) - \frac{\kappa'\left( t
+\right)}{\kappa^2\left( t \right)} \mathbf{n}_{\alpha}\left( s \right)
+\]
+Sin embargo, como $\alpha'$ y $\mathbf{n}'$ son perpendiculares ambos a
+$\mathbf{n}_{\alpha}$, no es posible, haciendo una suma de ambos, obtener un
+vector proporcional a $\mathbf{n}_{\alpha}$, luego, su suma en este caso será
+$0$:
+\begin{align*}
+    0 &= \alpha'\left( s \right) + \frac{1}{\kappa\left( s
+\right)}\mathbf{n}'_{\alpha}\left( s \right)\\
+      &\Rightarrow -\alpha'\left( s \right) \kappa\left( s \right) =
+      \mathbf{n}'_{\alpha}\left( s \right)
+\end{align*}
+Lo que comparado con la fórmula de Frenet-Serret nos indica que la torsión de
+$\alpha$ es $0$ y, por tanto, es plana.
