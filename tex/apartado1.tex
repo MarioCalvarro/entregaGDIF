@@ -73,24 +73,23 @@ s \right)} \mathbf{n}_{\alpha}\left( s \right)
 Es decir, la curva formada por los centros de curvatura de $\alpha$.
 
 Veamos ahora la implicación inversa. Por tanto, supongamos que $\beta$, como curva formada por los centros de curvatura de $\alpha$, es
-evoluta de $\alpha$. Al ser evoluta se da\footnote{Proposición
-7.2\cite{sanjurjo}} la siguiente relación:
+evoluta de $\alpha$. Al ser evoluta se da\footnote{Definición 7.1\cite{sanjurjo}} la siguiente relación:
 \[
-\alpha\left( s \right) = \beta\left( s \right) + \left( \lambda - s \right)
-\beta'\left( s \right),\ \lambda \in \mathbb{R}
+\alpha\left( s \right) = \beta\left( s \right) + t\left( s \right)
+\beta'\left( s \right),\ t: \mathbb{R} \rightarrow \mathbb{R}
 \]
 Si sustituimos el valor de $\alpha\left( s \right)$ dado por esta fórmula en la
 igualdad de la curva de centros tenemos lo siguiente:
 \begin{align*}
     \beta\left( s \right) &= \alpha\left( s \right) + \frac{1}{\kappa\left( s
     \right)} \mathbf{n}_{\alpha}\left( s \right)\\
-    &= \beta\left( s \right) + \left( \lambda - s \right) \beta'\left( s
+    &= \beta\left( s \right) + t\left( s \right) \beta'\left( s
     \right) + \frac{1}{\kappa\left( s \right)} \mathbf{n}_{\alpha}\left( s \right)
 \end{align*}
-Es decir, $0 = \left( \lambda - s \right)\beta'\left( s \right) +
+Es decir, $0 = t\left( s \right)\beta'\left( s \right) +
 \frac{1}{\kappa\left( s \right)} \mathbf{n}_{\alpha}\left( s \right)$. En
-definitiva, $\beta'\left( s \right) = \frac{1}{\kappa\left( s \right) \cdot
-\left( \lambda - s \right)} \mathbf{n}_{\alpha}\left( s \right)$. Como es para
+definitiva, $\beta'\left( s \right) = \frac{1}{\kappa\left( s \right)
+t\left( s \right)} \mathbf{n}_{\alpha}\left( s \right)$. Como es para
 un punto fijo, la anterior igualdad nos indica que $\beta'\left( s \right)$ y
 $\mathbf{n}_{\alpha}\left( s \right)$ son proporcionales. %TODO: Seguro?
 Si calculamos ahora $\beta'\left( s \right)$ en base a la fórmula de los centros de curvatura
@@ -100,10 +99,11 @@ tenemos que:
 \right)} \mathbf{n}'_{\alpha}\left( s \right) - \frac{\kappa'\left( s
 \right)}{\kappa^2\left( s \right)} \mathbf{n}_{\alpha}\left( s \right)
 \]
-Sin embargo, como $\alpha'\left( s \right)$ y $\mathbf{n}'_{\alpha}\left( s \right)$ son ambos perpendiculares a
-$\mathbf{n}_{\alpha}\left( s \right)$, no es posible, haciendo una suma de ambos, obtener un
-vector proporcional a $\mathbf{n}_{\alpha}\left( s \right)$, luego, su suma en este caso será
-$0$:
+Sin embargo, como $\alpha'\left( s \right)$ y $\mathbf{n}'_{\alpha}\left( s
+\right)$ son ambos perpendiculares a $\mathbf{n}_{\alpha}\left( s \right)$ (y,
+por lo tanto, linealmente independientes), no es posible, haciendo una suma de
+ambos, obtener un vector proporcional a $\mathbf{n}_{\alpha}\left( s \right)$,
+luego, su suma en este caso será $0$:
 \begin{align*}
     0 &= \alpha'\left( s \right) + \frac{1}{\kappa\left( s
 \right)}\mathbf{n}'_{\alpha}\left( s \right)\\
