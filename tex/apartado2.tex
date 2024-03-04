@@ -1,17 +1,18 @@
 \section{Apartado 2}
 Ya que estamos tratando con cilindros generalizados, estos podrán tener como
-base cualquier tipo de curva plana. Estos cilindros tienen la siguiente
+base cualquier tipo de curva. Estos cilindros tienen la siguiente
 parametrización:
-\[
-\varphi \left( u, v \right) = \gamma\left( u \right) + v \mathbf{v}
-\]
+\begin{align*}
+    \varphi: \mathbb{R}^2 &\rightarrow \mathbb{R}^3\\
+    \left( u, v \right) &\mapsto \gamma\left( u \right) + v \mathbf{v}
+\end{align*}
 donde $\mathbf{v}$ es un vector que nos indica la dirección en la que se
-construye el cilindro y $\gamma$, una curva plana (que será su base). Con esto, para
+construye el cilindro y $\gamma$, una curva (que será su base). Con esto, para
 ver que una curva esta contenida en un cilindro será simplemente necesario ver
 que la proyección de dicha curva a un plano perpendicular al cilindro es igual a
-la curva $\gamma$. En nuestro caso tendremos que, como $\beta$ es una evoluta de
-$\alpha$ (parametrizada por la longitud de arco),\footnote{Teorema
-7.5\cite{sanjurjo}}
+la proyección de la propia curva $\gamma$. En nuestro caso tendremos que, como
+$\beta$ es una evoluta de $\alpha$ (parametrizada por la longitud de
+arco),\footnote{Teorema 7.5\cite{sanjurjo}}
 \[
 \beta\left( s \right) = \alpha\left( s \right) + \frac{1}{\kappa\left( s
 \right)}\mathbf{n}_{\alpha}\left( s \right) + \frac{1}{\kappa\left( s \right)}

@@ -2,15 +2,15 @@
 Supongamos en primer lugar que $\alpha$ es una curva plana parametrizada por
 longitud de arco. Recordemos\footnote{Definición 6.9 \cite{sanjurjo}} que la
 curva definida por los centros de curvatura de $\alpha$ tiene la siguiente
-expresión
+expresión:
 \[
 \beta\left( s \right) = \alpha\left( s \right) + \frac{1}{\kappa\left( s
 \right)} \mathbf{n}_{\alpha}\left( s \right).
 \]
-Ya que $\alpha$ es una curva plana, sabemos que su torsión es nula, es decir,
-$\mathbf{n}'_{\alpha}\left( s \right) = - \kappa\left( s
-\right)\alpha'\left( s \right)$. Si derivamos ahora la definición de $\beta$
-tenemos que
+Ya que $\alpha$ es una curva plana, sabemos que su torsión es nula, es
+decir,\footnote{Fórmulas de Frenet-Serret} $\mathbf{n}'_{\alpha}\left( s \right)
+= - \kappa\left( s \right)\alpha'\left( s \right)$. Si derivamos ahora la
+definición de $\beta$ tenemos que
 \begin{align*}
 \beta'\left( s \right) &= \alpha'\left( s \right) +
 \frac{\mathbf{n}'_{\alpha}\left( s \right) \cdot \kappa\left( s \right) -
@@ -38,33 +38,34 @@ que $\alpha$ es la \textit{involuta} de $\beta$ con lo que queda demostrada esta
 primera implicación.
 
 Antes de ver la implicación recíproca, veamos la unicidad de esta evoluta plana.
-Sea pues $\gamma$ una evoluta plana cualquiera de $\alpha$. Tendremos\footnote{Definición 7.1\cite{sanjurjo}} entonces
-que $\alpha\left( s \right) = \gamma\left( s \right) + f\left( s
-\right)\gamma'\left( s \right)$ siendo $\alpha'\left( s \right)$ y
-$\gamma'\left( s \right)$ ortogonales y $f$ una función de $I$ a $\mathbb{R}$.
-Como ambas curvas son planas, el hecho de que sus tangentes sean perpendiculares
-en todo punto nos indica que pertenecen al mismo plano. Además, tenemos que
-$\gamma'\left( s \right)$ es proporcional a $\mathbf{n}_{\alpha}\left( s
-\right)$. En definitiva,
+Sea pues $\gamma$ una evoluta plana cualquiera de $\alpha$.
+Tendremos\footnote{Definición 7.1\cite{sanjurjo}} entonces que $\alpha\left( s
+\right) = \gamma\left( s \right) + t\left( s \right)\gamma'\left( s \right)$
+siendo $\alpha'\left( s \right)$ y $\gamma'\left( s \right)$ ortogonales y $t$
+una función de $I$ a $\mathbb{R}$. Como ambas curvas son planas, el hecho de que
+todos los puntos de $\alpha$ se encuentren en las rectas afines tangente de sus
+respectivos puntos de $\gamma$ nos dice que $\alpha$ y $\gamma$ se encuentran en
+el mismo plano. Con esto tenemos que $\gamma'\left( s \right)$ es proporcional a
+$\mathbf{n}_{\alpha}\left( s \right)$. En definitiva,
 \[
-\alpha\left( s \right) = \gamma\left( s \right) + g\left( s
-\right)\mathbf{n}_{\alpha} \left( s \right),
+\alpha\left( s \right) = \gamma\left( s \right) + \lambda\left( s
+\right)\mathbf{n}_{\alpha} \left( s \right).
 \]
-luego $\gamma\left( s \right) = \alpha\left( s \right) - g\left( s
+Luego $\gamma\left( s \right) = \alpha\left( s \right) - \lambda\left( s
 \right)\mathbf{n}_{\alpha}\left( s \right)$ y
 \begin{align*}
-    \gamma'\left( s \right) &= \alpha'\left( s \right) - g'\left( s \right)
-    \mathbf{n}_{\alpha}\left( s \right) - g\left( s
+    \gamma'\left( s \right) &= \alpha'\left( s \right) - \lambda'\left( s \right)
+    \mathbf{n}_{\alpha}\left( s \right) - \lambda\left( s
     \right)\mathbf{n}'_{\alpha}\left( s \right)\\
-    &= \mathbf{t}_{\alpha}\left( s \right) - g'\left( s
-    \right)\mathbf{n}_{\alpha}\left( s \right) + g\left( s \right)
+    &= \mathbf{t}_{\alpha}\left( s \right) - \lambda'\left( s
+    \right)\mathbf{n}_{\alpha}\left( s \right) + \lambda\left( s \right)
     \kappa\left( s \right) \mathbf{t}_{\alpha}\left( s \right)
 \end{align*}
 Ahora, haciendo el producto escalar por $\mathbf{t}_{\alpha}\left( s \right)$
-sobre esta expresión, tenemos que $0 = 1 + g\left( s
+sobre esta expresión, tenemos que $0 = 1 + \lambda\left( s
 \right)\kappa\left( s \right)$, debido a que $\mathbf{t}_{\alpha}\left(
 s\right)$ es perpendicular a $\gamma'\left( s \right)$ y a
-$\mathbf{n}_{\alpha}\left( s \right)$. Con esto obtenemos que $g\left( s \right)
+$\mathbf{n}_{\alpha}\left( s \right)$. Con esto obtenemos que $\lambda\left( s \right)
 = -\frac{1}{\kappa\left( s \right)}$ y sustituyendo en la anterior
 expresión de $\gamma\left( s \right)$ tenemos que
 \[
