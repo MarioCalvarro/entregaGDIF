@@ -2,34 +2,34 @@
 Supongamos en primer lugar que $\alpha$ es una curva plana parametrizada por
 longitud de arco. Recordemos\footnote{Definición 6.9 \cite{sanjurjo}} que la
 curva definida por los centros de curvatura de $\alpha$ tiene la siguiente
-expresión:
+expresión
 \[
 \beta\left( s \right) = \alpha\left( s \right) + \frac{1}{\kappa\left( s
-\right)} \mathbf{n}\left( s \right).
+\right)} \mathbf{n}_{\alpha}\left( s \right).
 \]
 Ya que $\alpha$ es una curva plana, sabemos que su torsión es nula, es decir,
 $\mathbf{n}'_{\alpha}\left( s \right) = - \kappa\left( s
 \right)\alpha'\left( s \right)$. Si derivamos ahora la definición de $\beta$
-tenemos que:
+tenemos que
 \begin{align*}
-    \beta'\left( s \right) &= \alpha'\left( s \right) +
+\beta'\left( s \right) &= \alpha'\left( s \right) +
 \frac{\mathbf{n}'_{\alpha}\left( s \right) \cdot \kappa\left( s \right) -
 \kappa'\left( s \right) \cdot \mathbf{n}_{\alpha}\left( s
-\right)}{\kappa^2\left( s \right)} \\
-&= \alpha'\left( s \right) -
+\right)}{\kappa^2\left( s \right)} \\ &= \alpha'\left( s \right) -
 \frac{\kappa'\left( s \right) \cdot \mathbf{n}_{\alpha}\left( s
 \right)}{\kappa^2\left( s \right)} + \frac{1}{\kappa\left( s \right)} \left(
--\kappa\left( s \right) \alpha'\left( s \right) \right) = \boxed{-\frac{\kappa'\left( s
-\right)}{\kappa^2\left( s \right)} \mathbf{n}_{\alpha}\left( s \right)}
+-\kappa\left( s \right) \alpha'\left( s \right) \right) =
+\boxed{-\frac{\kappa'\left( s \right)}{\kappa^2\left( s \right)}
+\mathbf{n}_{\alpha}\left( s \right)}.
 \end{align*}
 Con esta última expresión, y sabiendo que $\frac{-\kappa'\left( s
 \right)}{\kappa^2\left( s \right)}$ es un escalar y que
-$\mathbf{n}_{\alpha}\left( s \right)$ es perpendicular a $\alpha'$, tenemos que
+$\mathbf{n}_{\alpha}\left( s \right)$ es perpendicular a $\alpha'\left( s \right)$, tenemos que
 $\alpha'\left( s \right)$ y $\beta'\left( s \right)$ son ortogonales. Ahora,
 despejando $\alpha$ en la definición de $\beta$, vemos que
 \[
 \alpha\left( s \right) = \beta\left( s \right) - \frac{1}{\kappa\left( s
-\right)} \mathbf{n}\left( s \right) = \beta\left( s \right) + \frac{\kappa\left(
+\right)} \mathbf{n}_{\alpha}\left( s \right) = \beta\left( s \right) + \frac{\kappa\left(
 s\right)}{\kappa'\left( s \right)} \beta'\left( s \right)
 \]
 y, por tanto, $\alpha\left( s \right)$ se encuentra en la recta tangente a
@@ -38,13 +38,14 @@ que $\alpha$ es la \textit{involuta} de $\beta$ con lo que queda demostrada esta
 primera implicación.
 
 Antes de ver la implicación recíproca, veamos la unicidad de esta evoluta plana.
-Sea pues $\gamma$ una evoluta cualquiera de $\alpha$. Tendremos entonces que
-$\alpha\left( s \right) = \gamma\left( s \right) + f\left( s
+Sea pues $\gamma$ una evoluta plana cualquiera de $\alpha$. Tendremos\footnote{Definición 7.1\cite{sanjurjo}} entonces
+que $\alpha\left( s \right) = \gamma\left( s \right) + f\left( s
 \right)\gamma'\left( s \right)$ siendo $\alpha'\left( s \right)$ y
-$\gamma'\left( s \right)$ ortogonales. Como ambas curvas son planas el hecho de
-que sus tangentes sean perpendiculares en todo momento, nos indica que
-pertenecen al mismo plano. Además, tenemos que $\gamma'\left( s \right)$ es
-proporcional a $\mathbf{n}_{\alpha}\left( s \right)$. En definitiva,
+$\gamma'\left( s \right)$ ortogonales y $f$ una función de $I$ a $\mathbb{R}$.
+Como ambas curvas son planas, el hecho de que sus tangentes sean perpendiculares
+en todo punto nos indica que pertenecen al mismo plano. Además, tenemos que
+$\gamma'\left( s \right)$ es proporcional a $\mathbf{n}_{\alpha}\left( s
+\right)$. En definitiva,
 \[
 \alpha\left( s \right) = \gamma\left( s \right) + g\left( s
 \right)\mathbf{n}_{\alpha} \left( s \right),
@@ -57,18 +58,18 @@ luego $\gamma\left( s \right) = \alpha\left( s \right) - g\left( s
     \right)\mathbf{n}'_{\alpha}\left( s \right)\\
     &= \mathbf{t}_{\alpha}\left( s \right) - g'\left( s
     \right)\mathbf{n}_{\alpha}\left( s \right) + g\left( s \right)
-    \kappa_{\alpha}\left( s \right) \mathbf{t}_{\alpha}\left( s \right)
+    \kappa\left( s \right) \mathbf{t}_{\alpha}\left( s \right)
 \end{align*}
 Ahora, haciendo el producto escalar por $\mathbf{t}_{\alpha}\left( s \right)$
 sobre esta expresión, tenemos que $0 = 1 + g\left( s
-\right)\kappa_{\alpha}\left( s \right)$, debido a que $\mathbf{t}_{\alpha}\left(
+\right)\kappa\left( s \right)$, debido a que $\mathbf{t}_{\alpha}\left(
 s\right)$ es perpendicular a $\gamma'\left( s \right)$ y a
 $\mathbf{n}_{\alpha}\left( s \right)$. Con esto obtenemos que $g\left( s \right)
-= -\frac{1}{\kappa_{\alpha}}\left( s \right)$ y sustituyendo en la anterior
-expresión de $\gamma\left( s \right)$ tenemos que:
+= -\frac{1}{\kappa\left( s \right)}$ y sustituyendo en la anterior
+expresión de $\gamma\left( s \right)$ tenemos que
 \[
-\gamma\left( s \right) = \alpha\left( s \right) + \frac{1}{\kappa_{\alpha}\left(
-s \right)} \mathbf{n}_{\alpha}\left( s \right)
+\gamma\left( s \right) = \alpha\left( s \right) + \frac{1}{\kappa\left(
+s \right)} \mathbf{n}_{\alpha}\left( s \right).
 \]
 Es decir, la curva formada por los centros de curvatura de $\alpha$.
 
@@ -76,7 +77,7 @@ Veamos ahora la implicación inversa. Por tanto, supongamos que $\beta$, como cu
 evoluta de $\alpha$. Al ser evoluta se da\footnote{Definición 7.1\cite{sanjurjo}} la siguiente relación:
 \[
 \alpha\left( s \right) = \beta\left( s \right) + t\left( s \right)
-\beta'\left( s \right),\ t: \mathbb{R} \rightarrow \mathbb{R}
+\beta'\left( s \right),\ t: I \rightarrow \mathbb{R}
 \]
 Si sustituimos el valor de $\alpha\left( s \right)$ dado por esta fórmula en la
 igualdad de la curva de centros tenemos lo siguiente:
@@ -103,12 +104,12 @@ Sin embargo, como $\alpha'\left( s \right)$ y $\mathbf{n}'_{\alpha}\left( s
 \right)$ son ambos perpendiculares a $\mathbf{n}_{\alpha}\left( s \right)$ (y,
 por lo tanto, linealmente independientes), no es posible, haciendo una suma de
 ambos, obtener un vector proporcional a $\mathbf{n}_{\alpha}\left( s \right)$,
-luego, su suma en este caso será $0$:
+luego, su suma en este caso será $0$. Por tanto,
 \begin{align*}
     0 &= \alpha'\left( s \right) + \frac{1}{\kappa\left( s
 \right)}\mathbf{n}'_{\alpha}\left( s \right)\\
       &\Rightarrow -\alpha'\left( s \right) \kappa\left( s \right) =
       \mathbf{n}'_{\alpha}\left( s \right)
 \end{align*}
-Lo que comparado con la fórmula de Frenet-Serret nos indica que la torsión de
+lo que comparado con la fórmula de Frenet-Serret nos indica que la torsión de
 $\alpha$ es $0$ y, por tanto, es plana.
