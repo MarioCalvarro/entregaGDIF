@@ -1,1 +1,54 @@
 \section{Apartado 2}
+En primer lugar, recordamos que la parametrización que hemos elegido es:
+\[
+\varphi\left( \lambda, \theta \right) = \left( \cosh \lambda \cos \theta,
+\cosh \lambda \sin \theta, \lambda \right).
+\]
+Siendo la definición de primera forma fundamental:
+\begin{align*}
+    \mathrm{I}_p: T_pX &\rightarrow \mathbb{R}\\
+    \left( v, v' \right) &\mapsto \langle v, v' \rangle
+\end{align*}
+tiene como matriz respecto de la base $\langle \varphi_{\lambda}\left( p \right),
+\varphi_{\theta}\left( p \right) \rangle$
+\[
+    \begin{pmatrix} E & F\\ F & G \end{pmatrix} = \begin{pmatrix} 
+    \varphi_{\lambda} \cdot \varphi_{\lambda} & \varphi_{\lambda} \cdot \varphi_{\theta}\\
+    \varphi_{\theta} \cdot \varphi_{\lambda} & \varphi_{\theta} \cdot
+    \varphi_{\theta}
+    \end{pmatrix}
+\]
+Por tanto, como:
+\begin{gather*}
+    \varphi_{\lambda} = \left( \sinh \lambda \cos \theta, \sinh \lambda \sin
+    \theta, 1 \right)\\
+    \varphi_{\theta} = \left( -\cosh \lambda \sin \theta, \cosh \lambda \cos
+    \theta, 0 \right)
+\end{gather*}
+Tenemos que:
+\begin{align*}
+    \varphi_{\lambda} \cdot \varphi_{\lambda} &= \sinh^2 \lambda \cos^2 \theta +
+    \sinh^2 \lambda \sin^2 \theta + 1 = 1 + \sinh^2 \lambda\\
+    \varphi_{\theta} \cdot \varphi_{\theta} &= \cosh^2 \lambda \sin^2 \theta +
+    \cosh^2 \lambda \cos^2 \theta = \cosh^2 \lambda\\
+    \varphi_{\lambda} \cdot \varphi_{\theta} = \varphi_{\theta} \cdot
+    \varphi_{\lambda} &= -\cosh \lambda \sinh \lambda \cos \theta \sin \theta +
+    \cosh \lambda \sinh \lambda \cos \theta \sin \theta = 0
+\end{align*}
+Con lo que al final la matriz queda como:
+\[
+    \begin{pmatrix} E & F\\ F & G \end{pmatrix} = \begin{pmatrix} 
+    1 + \sinh^2 \lambda & 0\\
+    0 & \cosh^2 \lambda
+    \end{pmatrix} = \begin{pmatrix} 
+    \cosh^2 \lambda & 0\\
+    0 & \cosh^2 \lambda
+    \end{pmatrix}
+\]
+Para calcular la segunda forma fundamental necesitaremos la aplicación de Gauss
+que en este caso será:
+\begin{align*}
+    N : X &\rightarrow X^2\\
+    p &\mapsto N\left( p \right) = \frac{\varphi_{\lambda} \times
+    \varphi_{\theta}}{\left\lVert  \right\rVert}
+\end{align*}
