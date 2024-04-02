@@ -1,1 +1,165 @@
 \section{Apartado 1}
+Recordamos que, para demostrar que $X$ es una superficie diferenciable podemos
+simplemente ver que, considerando
+\begin{align*}
+    F: \mathbb{R}^3 &\rightarrow \mathbb{R}\\
+    \left( x, y, z \right) &\mapsto x^2 + y^2 - \cosh^2z = 0
+\end{align*}
+y viendo que $X = \left\{ F\left( x, y, z \right) = 0 \right\}$, es suficiente
+ver que $F \in C^{\infty)}$ y que $0$ es un valor regular de $F$, es decir, que
+$\nabla F\left( p \right) \neq 0,\ \forall p \in X$. Que $F$ pertenezca a
+$C^{\infty)}$ es trivial y, como $\nabla F = \left( 2x, 2y, 2\sinh z \cosh z
+\right)$, tendremos que $\nabla F\left( x, y, z \right) = 0$ si, y sólo si,
+\[
+    \begin{cases}
+        x = 0\\
+        y = 0\\
+        z = \sinh z \cosh z \Leftrightarrow \sinh z = 0 \text{ ó } \cosh z = 0
+    \end{cases}
+\]
+Como 
+\[
+\sinh z = 0 \Leftrightarrow \frac{e^z - e^{-z}}{2} = 0 \Leftrightarrow e^z =
+e^{-z} \Leftrightarrow z = 0
+\]
+y
+\[
+\cosh z = 0 \Leftrightarrow \frac{e^z + e^{-z}}{2} = 0 \Leftrightarrow e^z =
+-e^{-z} \Leftrightarrow z = 0,
+\]
+tenemos que $\nabla F\left( x, y, z \right) = 0 \Leftrightarrow \left( x, y, z
+\right) = 0$ que no pertenece a $X$ y, por lo tanto, $X$ es una superficie
+diferenciable.
+
+Veamos ahora una parametrización de la superficie. Si tomamos $u \in \mathbb{R}$
+y $\theta \in \left[ 0, 2 \pi \right)$ y realizamos un cambio de variable, $x =
+u \cos \theta,\ y = u \sin \theta$, tenemos que:
+\[
+u^2 - \cosh^2 z = 0
+\]
+y, por tanto,
+\[
+u^2 = \cosh^2 z.
+\]
+En definitiva, tenemos como parametrización: 
+\begin{align*}
+    \varphi: \left[ 0, 2 \pi \right) \times \mathbb{R} &\rightarrow X\\
+    \left( \lambda, \theta \right) &\mapsto \left( \cosh \lambda \cos \theta, \cosh
+    \lambda \sin \theta, \lambda \right)
+\end{align*}
+Sin embargo, esto no es del todo correcto puesto que nos interesa que el dominio
+sea un abierto. Por esta razón utilizaremos dos parametrizaciones con dominio
+abierto que cubran toda la superficie. Estarán definidas por las mismas
+ecuaciones, pero una tendrá como dominio $\left( -\pi, \pi \right)$ y la otra
+$\left( 0, 2 \pi \right)$. Con esto la primera cubrirá el hueco que deja la otra
+en el $0$.
+
+Ahora debemos comprobar que $\varphi$ es diferenciable (trivial por serlo sus
+componentes), es un homeomorfismo con su imagen y que la aplicación diferencial
+de $\varphi$ es inyectiva.
+
+Veamos que es un homeomorfismo, es decir, que tanto $\varphi$ como
+$\varphi^{-1}$ son continuas y biyectivas. La sobreyectividad se da al ser sobre
+su imagen. Veamos la inyectividad. Si $\lambda_1 \neq \lambda_2 \in \mathbb{R}$
+ó $\theta_1 \neq \theta_2 \in \left( 0, 2 \pi \right)$, supongamos que
+$\varphi\left( \lambda_1, \theta_1 \right) = \varphi\left( \lambda_2, \theta_2
+\right)$. Si $\lambda_1 \neq \lambda_2$ entonces la componente $z$ será distinta
+directamente, por tanto, supongamos que $\lambda_1 = \lambda_2$ y $\theta_1 \neq
+\theta_2$. Con esto tenemos que $\cosh \lambda_1 = \cosh \lambda_2$, es decir,
+$\cosh \lambda \cos \theta_1 = \cosh \lambda \cos \theta_2
+\Leftrightarrow\footnote{Podemos dividir entre $\cosh \lambda$ porque esta
+función no se anula en ningún punto de su dominio.} \cos \theta_1 = \cos
+\theta_2$, pero como estamos en un dominio de tamaño $< 2 \pi$, esto es
+imposible y las componentes $x$ son distintas. De manera similar con la
+componente $y$. Con esto $f$ es biyectiva.
+
+Para ver ahora que $\varphi^{-1}$ es continua tomemos $q \in U$ y la proyección $\pi: \mathbb{R}^3 \rightarrow
+\mathbb{R}^2$ tal que $\pi\left( x, y, z \right) = \left( x, y \right)$. Como
+hemos visto que $\varphi$ es diferenciable, podemos aplicar el teorema de la
+función inversa y obtenemos entornos $V_1 \subset U$ de $q$ y $V_2 \subset
+\mathbb{R}^2$ de $\pi \circ \varphi\left( q \right)$ tal que se aplica de forma
+difeomorfa $V_1$ a $V_2$ a través de $\pi \circ \varphi$. Como hemos visto que
+$\varphi$ es biyectiva, al restringir a $\varphi\left( V_1 \right)$,
+$\varphi^{-1} = \left( \pi \circ \varphi \right)^{-1} \circ \pi$ tenemos que
+$\varphi^{-1}$ es composición de funciones continuas, es decir, es continua.
+
+A continuación veremos que $d \varphi$ es inyectiva. Para ello veremos el rango
+de la matriz de la aplicación lineal:
+\[
+    d \varphi = \begin{pmatrix}
+    \sinh \lambda \cos \theta & -\cosh \lambda \sin \theta\\
+    \sinh \lambda \sin \theta & \cosh \lambda \cos \theta\\
+    1 & 0
+    \end{pmatrix}
+\]
+es $2$ para todo los valores posibles. En primer lugar,
+\[
+\begin{vmatrix} 
+    \sinh \lambda \cos \theta & -\cosh \lambda \sin \theta\\
+    \sinh \lambda \sin \theta & \cosh \lambda \cos \theta
+\end{vmatrix} = \sinh \lambda \cosh \lambda \left( \cos^2 \theta + \sin \theta
+\right) = \sinh \lambda \cosh \lambda = 0
+\]
+Lo que solo se puede dar si $\lambda = 0$. Por tanto, solo nos queda comprobar
+este caso:
+\[
+d \varphi \left( 0, \theta \right) = \begin{pmatrix} 
+    0 & -\sin \theta\\
+    0 & \cos \theta\\
+    1 & 0
+\end{pmatrix}
+\]
+con lo que el rango también es $2$ y la aplicación es inyectiva.
+
+Por último, debemos comprobar que las dos parametrizaciones que hemos visto
+antes cubren toda la superficie. Si llamamos $\varphi_1$ a la parametrización
+con dominio $\left( 0, 2 \pi \right)$ y $\varphi_2$ a la que cubre $\left( -\pi,
+\pi \right)$, tenemos que ver que $\varphi_1\left( U_1 \right) \cup
+\varphi_2\left( U_2 \right) = X$, donde $U_1 = \left\{ \left( \lambda, \theta
+    \right) : \lambda \in \mathbb{R},\ \theta \in \left( 0, 2 \pi \right)
+    \right\}$ y $U_2 = \left\{ \left( \lambda, \theta \right) : \lambda \in
+    \mathbb{R}, \theta \in \left( -\pi, \pi \right) \right\}$.
+\begin{itemize}
+\item[$\subset)$] Sea $\left( x, y, z \right) \in \varphi_1\left( U_1 \right)
+    \cup \varphi_2\left( U_2 \right)$, entonces $\exists \left( \lambda, \theta
+    \right) \in U_1 \cup U_2$ tal que 
+    \[
+        \varphi\left( \lambda, \theta \right) =
+        \left( \cosh \lambda \cos \theta, \cosh \lambda \sin \theta, \lambda \right)
+        = 
+    \]
+    debemos ver que se cumple que $x^2 + y^2 - \cosh^2 z = 0$ que sale de como
+    hemos definido la parametrización. 
+
+\item[$\supset)$] Sea $\left( x, y, z \right) \in X$. Si perteneciese a
+    $\varphi_1\left( U_1 \right) \cup \varphi_2\left( U_2 \right)$ entonces debe
+    existir $\left( \lambda, \theta \right) \in U_1 \cup U_2$ tal que
+    $\varphi\left( \lambda, \theta \right) = \left( \cosh \lambda \cos \theta,
+    \cosh \lambda \sin \theta, \lambda \right) = \left( x, y, z \right)$
+
+    Si tenemos que $x \neq  0$, entonces:
+    \[
+    \begin{cases}
+        \cosh \lambda \cos \theta = x\\
+        \cosh \lambda \sin \theta = y\\
+        \lambda = z
+    \end{cases}
+    \]
+    lo que quiere decir que $\lambda = z$ y $\theta = \arctan\left( \frac{y}{x}
+    \right)$, luego $\varphi\left( z, \arctan\left( \frac{y}{x} \right) \right)
+    = \left( x, y, z \right)$.
+
+    Si $x = 0$, $\left( 0, y, z \right) \in X \Rightarrow y = \pm \cosh z = \pm
+    \cosh \lambda$, luego $\left( z, \frac{\pi}{2} \right), \left( z,
+    \frac{3 \pi}{2} \right) \in U_0$ y su imagen por $\varphi$ es $\left( 0, y,
+    z\right)$ porque: 
+    \begin{gather*}
+        \varphi\left( z, \frac{\pi}{2} \right) = \left( \cosh z \cos
+        \frac{\pi}{2}, \cosh z \sin \frac{\pi}{2}, z \right) = \left( 0, \cosh
+        z, z \right) = \left( 0, y, z \right)\\ 
+        \varphi\left( z, \frac{3\pi}{2}
+        \right) = \left( \cosh z \cos \frac{3\pi}{2}, \cosh z \sin \frac{3\pi}{2}, z
+        \right) = \left( 0, -\cosh z, z \right) = \left( 0, y, z \right)\\
+    \end{gather*}
+\end{itemize}
+En definitiva, cubrimos toda la superficie $X$.
