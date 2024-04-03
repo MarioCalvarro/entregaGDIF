@@ -6,7 +6,7 @@ En primer lugar, recordamos que la parametrización que hemos elegido es:
 \]
 Siendo la definición de primera forma fundamental:
 \begin{align*}
-    \mathrm{I}_p: T_pX &\rightarrow \mathbb{R}\\
+    \mathbf{I}_p: T_pX &\rightarrow \mathbb{R}\\
     \left( v, v' \right) &\mapsto \langle v, v' \rangle
 \end{align*}
 tiene como matriz respecto de la base $\langle \varphi_{\lambda}\left( p \right),
@@ -46,13 +46,13 @@ Con lo que al final la matriz queda como:
     \end{pmatrix}
 \]
 Para calcular la segunda forma fundamental necesitaremos la aplicación de Gauss
-que en este caso será:
+que será:
 \begin{align*}
     N : X &\rightarrow X^2\\
     p &\mapsto N\left( p \right) = \frac{\varphi_{\lambda} \times
     \varphi_{\theta}}{\left\lVert \varphi_{\lambda} \times \varphi_{\theta} \right\rVert}
 \end{align*}
-Además:
+Calculando
 \[
 \varphi_{\lambda} \times \varphi_{\theta} = \begin{vmatrix} 
     i & j & k\\
@@ -65,4 +65,71 @@ y
 \[
 \left\lVert \varphi_{\lambda} \times \varphi_{\theta} \right\rVert =
 \sqrt{\cosh^2 \lambda \left( 1 + \sinh^2 \lambda \right)} = \cosh^2 \lambda
+\]
+En definitiva nos queda que:
+\[
+N\left( p \right) = \left( - \frac{\cos \theta}{\cosh \lambda}, -\frac{\sin
+\theta}{\cosh \lambda}, \frac{\sinh \lambda}{\cosh \lambda} \right)
+\]
+Con este valor podemos calcular entonces la segunda forma fundamental que
+recordemos definíamos como:
+\begin{align*}
+    \mathbf{II}_p : T_pX &\rightarrow \mathbb{R}\\
+    \left( v, v' \right) &\mapsto dN_p\left( v \right) \cdot v'
+\end{align*}
+Con la siguiente matriz respecto de la base $\langle \varphi_{\lambda},
+\varphi_{\theta} \rangle$:
+\[
+    \begin{pmatrix} e & f\\ f & g \end{pmatrix} = \begin{pmatrix} 
+    N \cdot \varphi_{\lambda \lambda} & N \cdot \varphi_{\lambda \theta}\\
+    N \cdot \varphi_{\theta \lambda} & N \cdot \varphi_{\theta \theta}
+\end{pmatrix}
+\]
+Realizamos entonces los cálculos necesarios:
+\begin{gather*}
+    \varphi_{\lambda \lambda} = \left( \cosh \lambda \cos \theta, \cosh \lambda
+    \sin \theta, 0 \right) \qquad N \cdot \varphi_{\lambda \lambda} = -1\\
+    \varphi_{\theta \theta} = \left( - \cosh \lambda \cos \theta, -\cosh
+    \lambda \sin \theta, 0 \right) \qquad N \cdot \varphi_{\theta \theta} = 1\\
+    \varphi_{\lambda \theta} =\footnote{Lema de Schwarz} \varphi_{\theta
+    \lambda} = \left( -\sinh \lambda \sin \theta, \sinh \lambda \cos \theta, 0
+    \right) \qquad N \cdot \varphi_{\lambda \theta} = N \cdot \varphi_{\theta
+    \theta} = 0\\
+\end{gather*}
+Por lo que al final nos queda la matriz:
+\[
+    \begin{pmatrix} e & f\\ f & g \end{pmatrix} = \begin{pmatrix} -1 & 0\\ 0 &
+1 \end{pmatrix}
+\]
+Calculamos ahora la aplicación de Weingarten que se define como la derivada de
+la aplicación de Gauss, es decir,
+\[
+d_p N: T_p X \rightarrow T_p X
+\]
+Haciendo uso de las formas fundamentales tenemos que:
+\begin{gather*}
+    \begin{pmatrix} e & f\\ f & g \end{pmatrix} = -dN_p \begin{pmatrix} E & F\\
+F & G\end{pmatrix} \Leftrightarrow\\
+    \begin{pmatrix} -1 & 0\\ 0 & 1 \end{pmatrix} = -\begin{pmatrix} 
+    a_{11} & a_{21}\\ a_{12} & a_{22} \end{pmatrix}
+    \begin{pmatrix} \cosh^2 \lambda & 0\\ 0 & \cosh^2 \lambda\end{pmatrix}
+\end{gather*}
+En definitiva,
+\[
+    dN_p = \begin{pmatrix} \frac{1}{\cosh^2 \lambda} & 0\\
+    0 & -\frac{1}{\cosh^2 \lambda}\end{pmatrix}
+\]
+Por último, calculamos la curvatura de Gauss. Para ello, calcularemos los
+autovalores de la aplicación de Weingarten para obtener $-k_1$ y $-k_2$:
+\[
+    \begin{vmatrix} \frac{1}{\cosh^2 \lambda} - \eta & 0\\
+    0 & -\frac{1}{\cosh^2 \lambda} - \eta \end{vmatrix} = -\frac{1}{\cosh^4
+    \lambda} - \eta = 0
+\]
+Por tanto,
+\[
+\eta = \pm \frac{1}{\cosh^2 \lambda} \Rightarrow \begin{cases}
+    k_1 = \frac{1}{\cosh^2 \lambda} > 0\\
+    k_2 = -\frac{1}{\cosh^2 \lambda} < 0
+\end{cases} \Rightarrow \boxed{K = - \frac{1}{\cosh^4 \lambda} < 0}
 \]
