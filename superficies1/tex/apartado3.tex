@@ -10,11 +10,88 @@ en el que la curvatura cambie de signo:
 \]
 Veamos que cualquier recta que esté contenida en una superficie es una línea
 asintótica. Esto quiere decir que, siendo $r$ una recta, $r$ (que es su propia
-tangente) se encuentra es una dirección asintótica ($k_n = 0$).
+tangente) se encuentra en una dirección asintótica ($k_n = 0$).
 
 Por tanto, sea $r: I \rightarrow X$ una curva parametrizada por la longitud de
 arco (p.p.a) de la traza de una recta contenida en $X$. Al ser una recta,
 sabemos que $r'' = 0$ y, por tanto, $k_{n_r} = k_r \cos \left(
 \mathrm{ang}\left( \overrightarrow{n}, N \right) \right) = 0$ con lo que la
 curvatura normal de todos los puntos de $r$ es nula y, en conclusión, $r$ es una
-línea asintótica.
+línea asintótica. Veamos entonces las direcciones de las líneas asintóticas (que
+pueden o no ser rectas, pero son las únicas posibles) que están contenidas en
+$X$.
+
+Sabiendo que $\mathbf{II}_p = 0$ en las direcciones asintóticas tenemos que:
+\[
+\mathrm{ker} \left( \mathrm{II}_p \right): 0 = -dN_p \left( x, y \right) \cdot
+\left( x, y \right) = \left( \frac{x}{\cosh^2 \lambda}, -\frac{y}{\cosh^2
+\lambda} \right) \cdot \left( x, y \right) = -\frac{1}{\cosh^2 \lambda} \left(
+x^2 - y^2 \right)
+\]
+Es decir, $\pm x = y$ o, lo que es lo mismo, $\left( 1, 1 \right)$ ó $\left( 1,
+-1\right)$. Utilizando estos puntos y la matriz de $d \varphi$ calculamos las
+direcciones asintóticas: 
+\[
+\begin{cases}
+    \begin{pmatrix} 
+    \sinh \lambda \cos \theta & -\cosh \lambda \sin \theta\\
+    \sinh \lambda cin \theta & \cosh \lambda \cos \theta\\
+    1 & 0
+    \end{pmatrix} \begin{pmatrix} 1 \\ 1 \end{pmatrix} &= 
+\underbrace{\left( \sinh \lambda \cos \theta - \cosh \lambda \sin \theta, \sinh \lambda
+    \sin \theta + \cosh \lambda \cos \theta, 1
+\right)}_{=: \overrightarrow{v_1}\left( \lambda, \theta \right)}\\
+
+    \begin{pmatrix} 
+    \sinh \lambda \cos \theta & -\cosh \lambda \sin \theta\\
+    \sinh \lambda cin \theta & \cosh \lambda \cos \theta\\
+    1 & 0
+    \end{pmatrix} \begin{pmatrix} 1 \\ -1 \end{pmatrix} &= 
+    \underbrace{\left( \sinh \lambda \cos \theta + \cosh \lambda \sin \theta, \sinh \lambda
+    \sin \theta - \cosh \lambda \cos \theta, 1 \right)}_{=:
+    \overrightarrow{v_2}\left( \lambda, \theta \right)}
+\end{cases}
+\]
+Analicemos el caso del punto $\left( 1, 0, 0 \right)$:
+\[
+\varphi\left( \lambda, \theta \right) = \left( 1, 0, 0 \right) \Rightarrow \begin{cases}
+    \cosh \lambda \cos \theta = 1\\
+    \cosh \lambda \sin \theta = 0\\
+    \lambda = 0
+\end{cases} \Rightarrow \begin{cases}
+    \lambda = 0\\
+    \theta = 0
+\end{cases}
+\]
+Para este punto las direcciones asintóticas son:
+\begin{align*}
+    \overrightarrow{v_1}\left( 0, 0 \right) &= \left( 0, 1, 1 \right) \\
+    \overrightarrow{v_2}\left( 0, 0 \right) &= \left( 0, -1, 1 \right)
+\end{align*}
+Por lo que las líneas asintóticas serán:
+\begin{align*}
+    r_1 &:= \left\{ \left( 1, t, t \right) : t \in \mathbb{R} \right\}\\
+    r_2 &:= \left\{ \left( 1, -t, t \right) : t \in \mathbb{R} \right\}
+\end{align*}
+Veamos que no satisfacen la ecuación que define a $X$ ($x^2 + y^2 = \cosh^2 z$)
+\begin{itemize}
+    \item Primera línea, $r_1$, si se diese:
+        \begin{align*}
+            1 + t^2 = \cosh^2 t \Rightarrow t^2 = \cosh^2 t - 1 = \sinh^2 \Rightarrow t
+            = \pm \sinh t
+        \end{align*}
+        Por lo tanto,
+        \begin{enumerate}
+            \item Si $t = \sinh t$, lo cual no es cierto para, por ejemplo, $t =
+                1$.
+            \item Si $t = -\sinh t$, lo cual no es cierto para, por ejemplo, $t
+                = 1$.
+        \end{enumerate}
+    \item Segunda línea, $r_2$, si se diese:
+    \[
+    1 + t^2 = \cosh^2 t
+    \]
+    y procedemos como en la anterior línea.
+\end{itemize}
+Como estas son las únicas posibles rectas que pasan por $\left( 1, 0, 0 \right)$
+contenidas en $X$, pero realmente no son rectas, no existe ninguna.
