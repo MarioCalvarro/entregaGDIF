@@ -50,5 +50,19 @@ que en este caso será:
 \begin{align*}
     N : X &\rightarrow X^2\\
     p &\mapsto N\left( p \right) = \frac{\varphi_{\lambda} \times
-    \varphi_{\theta}}{\left\lVert  \right\rVert}
+    \varphi_{\theta}}{\left\lVert \varphi_{\lambda} \times \varphi_{\theta} \right\rVert}
 \end{align*}
+Además:
+\[
+\varphi_{\lambda} \times \varphi_{\theta} = \begin{vmatrix} 
+    i & j & k\\
+    \sinh \lambda \cos \theta & \sinh \lambda \sin \theta & 1\\
+    -\cosh \lambda \sin \theta & \cosh \lambda \cos \theta & 0
+\end{vmatrix} = \left( -\cosh \lambda \cos \theta, -\cosh \lambda \sin \theta,
+\sinh \lambda \cosh \lambda \right)
+\]
+y
+\[
+\left\lVert \varphi_{\lambda} \times \varphi_{\theta} \right\rVert =
+\sqrt{\cosh^2 \lambda \left( 1 + \sinh^2 \lambda \right)} = \cosh^2 \lambda
+\]
