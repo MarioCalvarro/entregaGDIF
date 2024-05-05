@@ -1,0 +1,53 @@
+\section{Estudio de posibles geodésicas}
+En primer lugar, veamos que las curvas dadas son las semicircunferencias
+pedidas. Esto es equivalente a que, para cualquier $a$ y $r$ dados, existe un
+punto en $v = 0$ que está a la misma distancia de todos los puntos de la curva.
+Además, la curva debe ser exactamente una semicircunferencia. Antes de empezar
+a hacer cálculos daremos otra forma de expresar las componentes hiperbólicas de
+la curva:
+\[
+\tanh s = \frac{\sinh s}{\cos s} = \frac{e^s - e^{-s}}{e^{s} + e^{-s}}\qquad
+\sech s = \cosh^{-1} s = \frac{2}{e^s + e^{-s}}
+\]
+Con esto empezaremos calculando los límites de la curva cuando $s$ tiende a
+infinito:
+\begin{align*}
+    \lim_{s \rightarrow \infty} \left( u\left( s \right), v\left( s \right)
+    \right) &= \lim_{s \rightarrow \infty} \left( a + r \cdot \frac{e^s -
+    e^{-s}}{e^s + e^{-s}}, r \cdot \frac{2}{e^s + e^{-s}} \right)\\
+    &= \lim_{s \rightarrow \infty} \left( a + r \cdot \frac{e^s}{e^s}, r
+    \cdot \frac{2}{e^s} \right) = \left( a + r, 0 \right).\\
+    \lim_{s \rightarrow -\infty} \left( u\left( s \right), v\left( s \right)
+    \right) &= \lim_{s \rightarrow -\infty} \left( a + r \cdot \frac{e^s -
+    e^{-s}}{e^s + e^{-s}}, r \cdot \frac{2}{e^s + e^{-s}} \right)\\
+    &= \lim_{s \rightarrow -\infty} \left( a - r \cdot \frac{e^{-s}}{e^{-s}}, r
+    \cdot \frac{2}{e^s} \right) = \left( a - r, 0 \right).\\
+\end{align*}
+A su vez, $v\left( s \right) = r \cdot \frac{2}{e^s + e^{-s}} \begin{cases}
+    > 0, &\text{si } r > 0\\
+    < 0, &\text{si } r < 0
+\end{cases}$. Con esto hemos visto que la curva tiende a dos puntos con $v = 0$ (en
+$-\infty$ y $+\infty$) sin cruzar ningún otro con $v = 0$. Es decir, que si
+encontramos un punto que equidiste a todos los de la curva, aseguraremos que se
+trata de una semicircunferencia.
+
+Para obtener un posible candidato a centro de la supuesta semicircunferencia
+tenemos un par de datos, tiene que tener $v = 0$ y equidistar de los dos límites
+que acabamos de calcular. Con esto un posible centro sería el punto $\left( a, 0
+\right)$. Comprobemos que efectivamente lo es. Para ello vamos a ver que el
+cuadrado, y por tanto sin el cuadrado también, de la distancia euclídea del
+posible centro a cualquier punto de la curva es constante:
+\[
+\left\lvert \left( x - a , y \right) \right\rvert^2 \stackrel{?}{\equiv}
+\mathrm{const.}\ \forall \left( x, y \right) \in \left( u\left( s \right), v\left( s
+\right) \right).
+\]
+Sustituyendo el valor de un punto de la curva, tenemos que:
+\begin{align*}
+    \left\lvert \left( a + r \tanh s - a, r \sech s \right) \right\rvert^2 &=
+    r^2 \left( \tanh^2 s + \sech^2 s \right)\\ 
+    &= r^2 \cdot \frac{\sinh^2 s + 1}{\cosh^2 h}\\
+    &= r^2 \cdot \frac{\cosh^2 s - 1 + 1}{\cosh^2 s} = r^2 \equiv \mathrm{const.}
+\end{align*}
+Y con esto hemos probado que estas curvas son las semicircunferencias con centro
+en $v = 0$.
