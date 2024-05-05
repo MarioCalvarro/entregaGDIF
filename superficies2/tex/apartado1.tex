@@ -1,0 +1,27 @@
+\section{Curvatura de Gauss}
+Veamos que, efectivamente, la curvatura de Gauss de esta superficie es
+constantemente $-1$. Por hipótesis, sabemos que la matriz de la \textit{Primera
+Forma Fundamental} de esta superficie es:
+\[
+    \begin{pmatrix} E & F\\ F & G \end{pmatrix} = \begin{pmatrix} \frac{1}{v^2} & 0\\
+    0 & \frac{1}{v^2}\end{pmatrix}
+\]
+Además, gracias a que $F = 0$, podemos aplicar el ejercicio $7$ de la hoja $6$
+que nos indica una forma de la curvatura de Gauss:
+\[
+K = -\frac{1}{2 \sqrt{EG}}\left( \left( \frac{E_v}{\sqrt{EG}} \right)_v + \left(
+\frac{G_u}{\sqrt{EG}}\right)_u \right)
+\]
+Por lo que solo queda calcular los distintos términos:
+\begin{align*}
+    \sqrt{EG} &= \sqrt{\frac{1}{v^4}} = \frac{1}{v^2} & E_v &= -\frac{2}{v^3} &
+    G_u &= 0\\
+        & & \left( \frac{E_v}{\sqrt{EG}} \right)_v &= \left( -\frac{2}{v}
+        \right)_v = \frac{2}{v^2}
+\end{align*}
+Sustituyendo,
+\[
+K = -\frac{v^2}{2} \left( \frac{2}{v^2} + 0 \right) = - \frac{v^2}{2} \cdot
+\frac{2}{v^2} = -1.
+\]
+Que es lo que buscábamos.
