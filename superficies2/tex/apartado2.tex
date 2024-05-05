@@ -49,5 +49,57 @@ Sustituyendo el valor de un punto de la curva, tenemos que:
     &= r^2 \cdot \frac{\sinh^2 s + 1}{\cosh^2 h}\\
     &= r^2 \cdot \frac{\cosh^2 s - 1 + 1}{\cosh^2 s} = r^2 \equiv \mathrm{const.}
 \end{align*}
-Y con esto hemos probado que estas curvas son las semicircunferencias con centro
+Y con esto hemos probado que estas curvas son semicircunferencias con centro
 en $v = 0$.
+
+A continuación comprobaremos que las imágenes de estas curvas por $\varphi$
+están parametrizadas por su longitud de arco. La imagen de la curva por
+$\varphi$ será:
+\[
+\varphi\left( t \right) = \left( u\left( t \right), v \left( t \right) \right)
+\]
+Con lo que $\varphi'\left( t \right) = \varphi_u u'\left( t \right) + \varphi_v
+v'\left( t \right)$ y $\left( u'\left( t \right), v'\left( t \right) \right)$
+son las coordenadas de $\varphi'\left( t \right)$ sobre $\left\{ \varphi_u,
+\varphi_v \right\}$. Por la definición de la \textit{Primera Forma Fundamental}
+sabemos que:
+\[
+\left\lVert \varphi'\left( t \right) \right\rVert^2 = \mathrm{I}_{\varphi}
+\left( u'\left( t \right), v'\left( t \right) \right)
+\]
+Con lo que:
+\[
+L_{t_0}^t \left( \varphi \right) = \int_{t_0}^{t} \left\lVert \varphi'\left( s
+\right) \right\rVert \mathrm{d}s = \int_{t_0}^{t}
+\sqrt{\mathrm{I}_{\varphi\left( s \right)} \left( u'\left( s \right), v'\left( s
+\right) \right)} \mathrm{d}s
+\]
+Calculemos, pues, la primera forma fundamental para $\left( u'\left( t \right),
+v'\left( t \right) \right)$:
+\begin{align*}
+\mathrm{I}_{\varphi\left( t \right)}\left( u'\left( t \right), v'\left( t
+\right) \right) &= \left( u'\left( t \right), v'\left( t \right) \right)
+\begin{pmatrix} \frac{1}{v^2} & 0\\ 0 & \frac{1}{v^2} \end{pmatrix}
+\begin{pmatrix} u'\left( t \right)\\ v'\left( t \right) \end{pmatrix}\\ 
+&= \frac{1}{v^2} \cdot \left( u'\left( t \right), v'\left( t \right) \right) \begin{pmatrix} u'\left( t \right)\\ v'\left( t \right) \end{pmatrix}\\
+&= \frac{1}{v^2} \left( \left( u'\left( t \right) \right)^2 + \left( v'\left( t
+\right) \right)^2 \right).
+\end{align*}
+Como $u'\left( t \right) = r \sech^2 t$ y $v'\left( t \right) = -r \sech t
+\cdot \tanh t$, si sustituimos tenemos que:
+\begin{align*}
+\mathrm{I}_{\varphi\left( t \right)}\left( u'\left( t \right), v'\left( t
+\right) \right) &= \frac{r^2}{r^2 \cdot \sech^2 t} \cdot \sech^2 t \left( \sech^2 t + \tanh^2 t
+\right)\\
+&= \sech^2 t + \tanh^2 t
+\end{align*}
+En definitiva,
+\begin{align*}
+L_{t_0}^t \left( \varphi \right) &= \int_{t_0}^{t} \sqrt{\sech^2 t + \tanh^2
+t} \mathrm{d}t\\
+&= \int_{t_0}^{t} \sqrt{\frac{1}{\cosh^2 t} + \frac{\sinh^2 t}{\cosh^2 t}}
+\mathrm{d}t\\
+&= \int_{t_0}^{t} \sqrt{\frac{1 + \sinh^2 t}{\cosh^2 t}} \mathrm{d}t\\
+&= \int_{t_0}^{t}  \mathrm{d}t= t - t_0
+\end{align*}
+Con lo que queda probado que esta parametrizada por longitud de arco.
