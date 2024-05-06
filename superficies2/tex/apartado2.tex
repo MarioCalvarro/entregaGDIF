@@ -103,3 +103,72 @@ t} \mathrm{d}t\\
 &= \int_{t_0}^{t}  \mathrm{d}t= t - t_0
 \end{align*}
 Con lo que queda probado que esta parametrizada por longitud de arco.
+
+Por último, comprobemos que son geodésicas. Como la curva está parametrizada por
+longitud de arco, será geodésica si cumple que:
+\[
+\begin{cases}
+    u''\left( t \right) &= - \Gamma_{11}^1 u'\left( t \right)^2 - 2 \Gamma_{12}^1
+    u'\left( t \right) v'\left( t \right) - \Gamma_{22}^1 v'\left( t \right)^2\\
+    v''\left( t \right) &= - \Gamma_{11}^2 u'\left( t \right)^2 - 2 \Gamma_{12}^2
+    u'\left( t \right) v'\left( t \right) - \Gamma_{22}^2 v'\left( t \right)^2\\
+\end{cases}.
+\]
+Por tanto, para resolver este sistema de ecuaciones necesitamos saber el valor
+de los símbolos de Christoffel. Para ello usamos su relación con la
+matriz de la \textit{Primera Forma Fundamental}:
+\begin{align*}
+    \begin{cases}
+        \frac{1}{2} E_u &= E \Gamma_{11}^1 + F \Gamma_{11}^2\\
+        F_u - \frac{1}{2} E_v &= F \Gamma_{11}^1 + G \Gamma_{11}^2
+    \end{cases} &\Rightarrow \begin{cases}
+        0 &= \frac{1}{v^2} \Gamma_{11}^1\\
+        \frac{1}{v^3} &= \frac{1}{v^2} \Gamma_{11}^2
+        \end{cases} \xRightarrow{v > 0} \begin{cases}
+        \Gamma_{11}^1 &= 0\\
+        \Gamma_{11}^2 &= \frac{1}{v}
+    \end{cases}\\
+    \begin{cases}
+        \frac{1}{2}E_v &= E \Gamma_{12}^1 + F \Gamma_{12}^2\\
+        \frac{1}{2} G_u &= F \Gamma_{12}^1 + G \Gamma_{12}^2
+    \end{cases} &\Rightarrow \begin{cases}
+        -\frac{1}{v^3} &= \frac{1}{v^2} \Gamma_{12}^1\\
+        0 &= \frac{1}{v^2} \Gamma_{12}^2
+    \end{cases} \xRightarrow{v > 0} \begin{cases}
+        \Gamma_{12}^1 &= -\frac{1}{v}\\
+        \Gamma_{12}^2 &= 0
+    \end{cases}\\
+    \begin{cases}
+        F_v - \frac{1}{2} G_u &= E \Gamma_{22}^1 + F \Gamma_{22}^2\\
+        \frac{1}{2} G_v &= F \Gamma_{22}^1 + G \Gamma_{22}^2
+    \end{cases} &\Rightarrow \begin{cases}
+        0 &= \frac{1}{v^2} \Gamma_{22}^1\\
+        -\frac{1}{v^3} &= \frac{1}{v^2} \Gamma_{22}^2
+        \end{cases} \xRightarrow{v > 0} \begin{cases}
+        \Gamma_{22}^1 &= 0\\
+        \Gamma_{22}^2 &= -\frac{1}{v}
+    \end{cases}\\
+\end{align*}
+Con lo que solo queda comprobar si se verifican las ecuaciones de las geodésicas
+para esta curva. Calculemos las derivadas de $u$ y $v$:
+\begin{align*}
+    u'\left( t \right) &= r \sech^2 t & u''\left( t \right) &= 2 r
+    \sech t \cdot \left( - \sech t \cdot \tanh t \right) = -2 r \sech^2 t \cdot
+    \tanh t\\
+    v'\left( t \right) &= -r \sech t \cdot \tanh t & v''\left( t \right) &= r
+    \sech t \cdot \tanh^2 t - r \sech^3 t = r\sech t \left( \tanh^2 t - \sech^2
+    t \right)
+\end{align*}
+Y ahora sustituimos en las ecuaciones de las geodésicas con los valores que
+hemos obtenido para los símbolos de Christoffel:
+\[
+\begin{cases}
+    u''\left( t \right) &= -\frac{2}{v}r^2 \sech^3 t \cdot \tanh t\\
+    v''\left( t \right) &= -\frac{1}{v} r^2 \sech^4 t + \frac{1}{v} r^2 \sech^2 t
+    \cdot \tanh^2 t
+\end{cases} \xRightarrow{v = r \sech t} \begin{cases}
+    u''\left( t \right) = -2 r \sech^2 \left( t \right) \cdot \tanh t\\
+    v''\left( t \right) = r \sech t \left( \tan^2 t - \sech^2 t \right)
+\end{cases}
+\]
+Y con esto hemos comprobado que es una geodésica.
