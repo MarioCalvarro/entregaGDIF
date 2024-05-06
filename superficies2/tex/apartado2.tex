@@ -31,7 +31,7 @@ $v = 0$ que equidiste a todos los de la curva, aseguraremos que se trata de una
 semicircunferencia centrada en $v = 0$.
 
 Para obtener un posible candidato a centro de la supuesta semicircunferencia
-tenemos un par de datos, tiene que tener $v = 0$ y equidistar de los dos límites
+tenemos un par de datos: tiene que tener $v = 0$ y equidistar de los dos límites
 que acabamos de calcular. Con esto un posible centro sería el punto $\left( a, 0
 \right)$. Comprobemos que efectivamente lo es. Para ello vamos a ver que el
 cuadrado (y, por tanto, sin el cuadrado también) de la distancia euclídea del
@@ -85,7 +85,7 @@ v'\left( t \right) \right)$:
 \right) \right)^2 \right).
 \end{align*}
 Como $u'\left( t \right) = r \sech^2 t$ y $v'\left( t \right) = -r \sech t
-\cdot \tanh t$, si sustituimos tenemos que:
+\cdot \tanh t$, si sustituimos, tenemos que:
 \begin{align*}
 \mathrm{I}\left( u'\left( t \right), v'\left( t
 \right) \right) &= \frac{r^2}{r^2 \cdot \sech^2 t} \cdot \sech^2 t \left( \sech^2 t + \tanh^2 t
@@ -115,7 +115,8 @@ longitud de arco, será geodésica si cumple que:
 \]
 Por tanto, para resolver este sistema de ecuaciones necesitamos saber el valor
 de los símbolos de Christoffel. Para ello usamos su relación con la
-matriz de la \textit{Primera Forma Fundamental}:
+matriz de la \textit{Primera Forma Fundamental} (recordamos que $E_u = 0,\ E_v =
+-\frac{2}{v^3},\ F_u = F_v = 0,\ G_u = 0,\ G_v = - \frac{2}{v^3}$):
 \begin{align*}
     \begin{cases}
         \frac{1}{2} E_u &= E \Gamma_{11}^1 + F \Gamma_{11}^2\\
