@@ -2,23 +2,22 @@
 Empecemos dando una parametrización para las rectas verticales (es decir,
 aquellas con su coordenada $x$ constante):
 \[
-\alpha\left( t \right) = \left( u\left( t \right), v\left( t \right) \right) =
+\gamma\left( t \right) = \left( u\left( t \right), v\left( t \right) \right) =
 \left( a, re^t \right)
 \]
-Por los anteriores cálculos sabemos que $\mathrm{I}_{\varphi\left( t
-\right)}\left( u'\left( t \right), v'\left( t \right) \right) =
+Por los anteriores cálculos sabemos que $\mathrm{I}\left( u'\left( t \right), v'\left( t \right) \right) =
 \frac{1}{v^2}\left( \left( u'\left( t \right) \right)^2 + \left( v'\left( t
 \right) \right)^2 \right)$. Como en este caso $u'\left( t \right) = 0$ y
 $v'\left( t \right) = r e^t$, tenemos que:
 \[
-\mathrm{I}_{\varphi\left( t \right)} \left( u'\left( t \right), v'\left( t
+\mathrm{I} \left( u'\left( t \right), v'\left( t
 \right) \right) = 1.
 \]
 Y, de esta forma,
 \[
-L_{t_0}^t \left( \varphi \right) = \int_{t_0}^{t}
-\sqrt{\mathrm{I}_{\varphi\left( t \right)}} \left( u'\left( t \right), v'\left(
-t \right) \right) \mathrm{d}t = \int_{t_0}^{t} \mathrm{d}t = 1.
+L_{t_0}^t \left( \gamma \right) = \int_{t_0}^{t}
+\sqrt{\mathrm{I} \left( u'\left( t \right), v'\left(
+t \right) \right)} \mathrm{d}t = \int_{t_0}^{t} 1 \cdot \mathrm{d}t = t - t_0.
 \]
 Con lo que, con esta parametrización, las rectas verticales ya están
 parametrizadas por longitud de arco.
