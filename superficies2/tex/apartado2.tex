@@ -7,7 +7,7 @@ a hacer cálculos daremos otra forma de expresar las componentes hiperbólicas d
 la curva:
 \[
 \tanh s = \frac{\sinh s}{\cos s} = \frac{e^s - e^{-s}}{e^{s} + e^{-s}}\qquad
-\sech s = \cosh^{-1} s = \frac{2}{e^s + e^{-s}}
+\sech s = \cosh^{-1} s = \frac{2}{e^s + e^{-s}}.
 \]
 Con esto empezaremos calculando los límites de la curva cuando $s$ tiende a
 infinito:
@@ -56,7 +56,7 @@ A continuación comprobaremos que las imágenes de estas curvas por $\varphi$
 están parametrizadas por su longitud de arco. La imagen de la curva por
 $\varphi$ será:
 \[
-\varphi\left( t \right) = \left( u\left( t \right), v \left( t \right) \right)
+\varphi\left( t \right) = \left( u\left( t \right), v \left( t \right) \right).
 \]
 Con lo que $\varphi'\left( t \right) = \varphi_u u'\left( t \right) + \varphi_v
 v'\left( t \right)$ y $\left( u'\left( t \right), v'\left( t \right) \right)$
@@ -65,14 +65,14 @@ son las coordenadas de $\varphi'\left( t \right)$ sobre $\left\{ \varphi_u,
 sabemos que:
 \[
 \left\lVert \varphi'\left( t \right) \right\rVert^2 = \mathrm{I}_{\varphi}
-\left( u'\left( t \right), v'\left( t \right) \right)
+\left( u'\left( t \right), v'\left( t \right) \right).
 \]
 Con lo que:
 \[
 L_{t_0}^t \left( \varphi \right) = \int_{t_0}^{t} \left\lVert \varphi'\left( s
 \right) \right\rVert \mathrm{d}s = \int_{t_0}^{t}
 \sqrt{\mathrm{I}_{\varphi\left( s \right)} \left( u'\left( s \right), v'\left( s
-\right) \right)} \mathrm{d}s
+\right) \right)} \mathrm{d}s.
 \]
 Calculemos, pues, la primera forma fundamental para $\left( u'\left( t \right),
 v'\left( t \right) \right)$:
@@ -91,7 +91,7 @@ Como $u'\left( t \right) = r \sech^2 t$ y $v'\left( t \right) = -r \sech t
 \mathrm{I}_{\varphi\left( t \right)}\left( u'\left( t \right), v'\left( t
 \right) \right) &= \frac{r^2}{r^2 \cdot \sech^2 t} \cdot \sech^2 t \left( \sech^2 t + \tanh^2 t
 \right)\\
-&= \sech^2 t + \tanh^2 t
+&= \sech^2 t + \tanh^2 t.
 \end{align*}
 En definitiva,
 \begin{align*}
@@ -100,7 +100,7 @@ t} \mathrm{d}t\\
 &= \int_{t_0}^{t} \sqrt{\frac{1}{\cosh^2 t} + \frac{\sinh^2 t}{\cosh^2 t}}
 \mathrm{d}t\\
 &= \int_{t_0}^{t} \sqrt{\frac{1 + \sinh^2 t}{\cosh^2 t}} \mathrm{d}t\\
-&= \int_{t_0}^{t}  \mathrm{d}t= t - t_0
+&= \int_{t_0}^{t}  \mathrm{d}t= t - t_0.
 \end{align*}
 Con lo que queda probado que esta parametrizada por longitud de arco.
 
@@ -147,7 +147,7 @@ matriz de la \textit{Primera Forma Fundamental}:
         \end{cases} \xRightarrow{v > 0} \begin{cases}
         \Gamma_{22}^1 &= 0\\
         \Gamma_{22}^2 &= -\frac{1}{v}
-    \end{cases}\\
+    \end{cases}.
 \end{align*}
 Con lo que solo queda comprobar si se verifican las ecuaciones de las geodésicas
 para esta curva. Calculemos las derivadas de $u$ y $v$:
@@ -157,7 +157,7 @@ para esta curva. Calculemos las derivadas de $u$ y $v$:
     \tanh t\\
     v'\left( t \right) &= -r \sech t \cdot \tanh t & v''\left( t \right) &= r
     \sech t \cdot \tanh^2 t - r \sech^3 t = r\sech t \left( \tanh^2 t - \sech^2
-    t \right)
+    t \right).
 \end{align*}
 Y ahora sustituimos en las ecuaciones de las geodésicas con los valores que
 hemos obtenido para los símbolos de Christoffel:
@@ -169,6 +169,6 @@ hemos obtenido para los símbolos de Christoffel:
 \end{cases} \xRightarrow{v = r \sech t} \begin{cases}
     u''\left( t \right) = -2 r \sech^2 \left( t \right) \cdot \tanh t\\
     v''\left( t \right) = r \sech t \left( \tan^2 t - \sech^2 t \right)
-\end{cases}
+\end{cases}.
 \]
 Y con esto hemos comprobado que es una geodésica.
