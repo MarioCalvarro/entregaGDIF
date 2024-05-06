@@ -6,7 +6,7 @@ Además, la curva debe ser exactamente una semicircunferencia. Antes de empezar
 a hacer cálculos daremos otra forma de expresar las componentes hiperbólicas de
 la curva:
 \[
-\tanh s = \frac{\sinh s}{\cos s} = \frac{e^s - e^{-s}}{e^{s} + e^{-s}}\qquad
+\tanh s = \frac{\sinh s}{\cosh s} = \frac{e^s - e^{-s}}{e^{s} + e^{-s}}\qquad
 \sech s = \cosh^{-1} s = \frac{2}{e^s + e^{-s}}.
 \]
 Con esto empezaremos calculando los límites de la curva cuando $s$ tiende a
@@ -23,19 +23,18 @@ infinito:
     &= \lim_{s \rightarrow -\infty} \left( a - r \cdot \frac{e^{-s}}{e^{-s}}, r
     \cdot \frac{2}{e^s} \right) = \left( a - r, 0 \right).\\
 \end{align*}
-A su vez, $v\left( s \right) = r \cdot \frac{2}{e^s + e^{-s}} \begin{cases}
-    > 0, &\text{si } r > 0\\
-    < 0, &\text{si } r < 0
-\end{cases}$. Con esto hemos visto que la curva tiende a dos puntos con $v = 0$ (en
-$-\infty$ y $+\infty$) sin cruzar ningún otro con $v = 0$. Es decir, que si
-encontramos un punto que equidiste a todos los de la curva, aseguraremos que se
-trata de una semicircunferencia.
+A su vez, $v\left( s \right) = r \cdot \frac{2}{e^s + e^{-s}} \begin{cases} > 0,
+&\text{si } r > 0\\ < 0, &\text{si } r < 0 \end{cases}$. Con esto hemos visto
+que la curva tiende (en $-\infty$ y $+\infty$) a dos puntos con $v = 0$  sin
+cruzar antes ningún otro con $v = 0$. Es decir, que si encontramos un punto en
+$v = 0$ que equidiste a todos los de la curva, aseguraremos que se trata de una
+semicircunferencia centrada en $v = 0$.
 
 Para obtener un posible candidato a centro de la supuesta semicircunferencia
 tenemos un par de datos, tiene que tener $v = 0$ y equidistar de los dos límites
 que acabamos de calcular. Con esto un posible centro sería el punto $\left( a, 0
 \right)$. Comprobemos que efectivamente lo es. Para ello vamos a ver que el
-cuadrado, y por tanto sin el cuadrado también, de la distancia euclídea del
+cuadrado (y, por tanto, sin el cuadrado también) de la distancia euclídea del
 posible centro a cualquier punto de la curva es constante:
 \[
 \left\lvert \left( x - a , y \right) \right\rvert^2 \stackrel{?}{\equiv}
@@ -56,28 +55,28 @@ A continuación comprobaremos que las imágenes de estas curvas por $\varphi$
 están parametrizadas por su longitud de arco. La imagen de la curva por
 $\varphi$ será:
 \[
-\varphi\left( t \right) = \left( u\left( t \right), v \left( t \right) \right).
+\alpha\left( t \right) = \varphi\left( u\left( t \right), v \left( t \right) \right).
 \]
-Con lo que $\varphi'\left( t \right) = \varphi_u u'\left( t \right) + \varphi_v
+Con lo que $\alpha'\left( t \right) = \varphi_u u'\left( t \right) + \varphi_v
 v'\left( t \right)$ y $\left( u'\left( t \right), v'\left( t \right) \right)$
-son las coordenadas de $\varphi'\left( t \right)$ sobre $\left\{ \varphi_u,
+son las coordenadas de $\alpha'\left( t \right)$ sobre $\left\{ \varphi_u,
 \varphi_v \right\}$. Por la definición de la \textit{Primera Forma Fundamental}
 sabemos que:
 \[
-\left\lVert \varphi'\left( t \right) \right\rVert^2 = \mathrm{I}_{\varphi}
+\left\lVert \alpha'\left( t \right) \right\rVert^2 = \mathrm{I}
 \left( u'\left( t \right), v'\left( t \right) \right).
 \]
 Con lo que:
 \[
-L_{t_0}^t \left( \varphi \right) = \int_{t_0}^{t} \left\lVert \varphi'\left( s
+L_{t_0}^t \left( \alpha \right) = \int_{t_0}^{t} \left\lVert \alpha'\left( s
 \right) \right\rVert \mathrm{d}s = \int_{t_0}^{t}
-\sqrt{\mathrm{I}_{\varphi\left( s \right)} \left( u'\left( s \right), v'\left( s
+\sqrt{\mathrm{I} \left( u'\left( s \right), v'\left( s
 \right) \right)} \mathrm{d}s.
 \]
 Calculemos, pues, la primera forma fundamental para $\left( u'\left( t \right),
 v'\left( t \right) \right)$:
 \begin{align*}
-\mathrm{I}_{\varphi\left( t \right)}\left( u'\left( t \right), v'\left( t
+\mathrm{I} \left( u'\left( t \right), v'\left( t
 \right) \right) &= \left( u'\left( t \right), v'\left( t \right) \right)
 \begin{pmatrix} \frac{1}{v^2} & 0\\ 0 & \frac{1}{v^2} \end{pmatrix}
 \begin{pmatrix} u'\left( t \right)\\ v'\left( t \right) \end{pmatrix}\\ 
@@ -88,7 +87,7 @@ v'\left( t \right) \right)$:
 Como $u'\left( t \right) = r \sech^2 t$ y $v'\left( t \right) = -r \sech t
 \cdot \tanh t$, si sustituimos tenemos que:
 \begin{align*}
-\mathrm{I}_{\varphi\left( t \right)}\left( u'\left( t \right), v'\left( t
+\mathrm{I}\left( u'\left( t \right), v'\left( t
 \right) \right) &= \frac{r^2}{r^2 \cdot \sech^2 t} \cdot \sech^2 t \left( \sech^2 t + \tanh^2 t
 \right)\\
 &= \sech^2 t + \tanh^2 t.
